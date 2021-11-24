@@ -2,9 +2,9 @@
 
 double Angle[3] = {0}, Rate[3] = {0}, DT = 0;
 int Offset[7] = {
-   8200, // Acc X
-  7100,  // Acc Y
-  12560, // Acc Z
+  8820, // Acc X
+  7300,  // Acc Y
+  12740, // Acc Z
   0,     // Temp
   840,   // Gyro X
   -830,  // Gyro Y
@@ -73,16 +73,18 @@ void UpdateIMU()
   for(i = 0; i < 2; i++) Angle[i] = (Angle[i] + Rate[i]) * 0.98 + rawAngle[i] * 0.02;
   Angle[2] += Rate[2];
   //Angle[0] : roll x, Angle[1] : pitch y, Angle[2] : yaw z
+
   /*
   for(j=0;j<7;j++){
     Serial.print(RAW[j]);
     Serial.print("\t");
   }
+  */
   Serial.println("\n");
   for(j=0;j<3;j++){
     Serial.print(Angle[j]);
     Serial.print("\t");
   }
   Serial.println("\n");
-  */
+  
 }

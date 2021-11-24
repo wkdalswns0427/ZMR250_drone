@@ -35,10 +35,10 @@ void WriteAll(int16_t raw)
 void QuadX(int16_t Throttle, int16_t Roll, int16_t Pitch, int16_t Yaw)
 { 
   uint8_t j;
-  MotorSpeed[0] = 720 + Throttle - Roll - Pitch - Yaw;
-  MotorSpeed[1] = 1020 + Throttle - Roll + Pitch + Yaw; // pitch issues
+  MotorSpeed[0] = 800  + Throttle - Roll - Pitch - Yaw;
+  MotorSpeed[1] = 1035 + Throttle - Roll + Pitch + Yaw; // pitch issues
   MotorSpeed[2] = 920 + Throttle + Roll + Pitch - Yaw;
-  MotorSpeed[3] = 970 + Throttle + Roll - Pitch + Yaw;
+  MotorSpeed[3] = 1080 + Throttle + Roll - Pitch + Yaw;
 
   WriteMotor(0, MotorSpeed[0]);
   WriteMotor(1, MotorSpeed[1]);
@@ -50,4 +50,5 @@ void QuadX(int16_t Throttle, int16_t Roll, int16_t Pitch, int16_t Yaw)
     Serial.print("\t");
   }
   Serial.println("\n");
+                                                          
 }
