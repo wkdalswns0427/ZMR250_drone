@@ -2,13 +2,13 @@
 
 double Angle[3] = {0}, Rate[3] = {0}, DT = 0;
 int Offset[7] = {
-  8820, // Acc X
-  7300,  // Acc Y
-  12740, // Acc Z
-  0,     // Temp
-  840,   // Gyro X
-  -830,  // Gyro Y
-  1331};  // Gyro Z
+  9170, // Acc X
+  7285,  // Acc Y
+  15150, // Acc Z
+  -2895,     // Temp
+  841,   // Gyro X
+  -835,  // Gyro Y
+  1330};  // Gyro Z
 uint32_t imuTime = 0;
 
 void InitIMU()
@@ -66,7 +66,7 @@ void UpdateIMU()
   rawAngle[0] = atan2(RAW[1], rawVector) * RAD_TO_DEG;
   rawVector = sqrt(pow(RAW[1], 2) + pow(RAW[2], 2));
   ///here!!!!!!!!! -atan2 --> atan2
-  rawAngle[1] = atan2(RAW[0], rawVector) * RAD_TO_DEG;
+  rawAngle[1] = -atan2(RAW[0], rawVector) * RAD_TO_DEG;
   
   for(i = 0; i < 3; i++) Rate[i] = RAW[i+4] / 16.4 * DT; //RAW[4,5,6]  , 16.4 /frq from datasheet
   //low pass filter
