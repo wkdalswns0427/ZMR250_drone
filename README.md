@@ -10,4 +10,4 @@ MPU-6050 with AR620-DX6e transmitter
 - carbon frame
 - FC on Arduino Nano(32, old bootloader)
 
-* should upload after selecting 'Old Bootloader' on Arduino IDE's Tool
+** should upload after selecting 'Old Bootloader' on Arduino IDE's Tool **
