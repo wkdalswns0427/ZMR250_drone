@@ -43,10 +43,10 @@ void WriteAll(int16_t raw)
 void QuadX(int16_t Throttle, int16_t Roll, int16_t Pitch, int16_t Yaw)
 { 
   uint8_t j;
-  MotorSpeed[0] = 683  + Throttle + Roll - Pitch - Yaw;
-  MotorSpeed[1] = 1110 + Throttle + Roll + Pitch + Yaw; // pitch issues
-  MotorSpeed[2] = 830 + Throttle - Roll + Pitch - Yaw;
-  MotorSpeed[3] = 950 + Throttle - Roll - Pitch + Yaw;
+  MotorSpeed[0] = 900  + Throttle + Roll - Pitch - Yaw;
+  MotorSpeed[1] = 1150 + Throttle + Roll + Pitch + Yaw; // pitch issues
+  MotorSpeed[2] = 880 + Throttle - Roll + Pitch - Yaw;
+  MotorSpeed[3] = 1000 + Throttle - Roll - Pitch + Yaw;
 
   WriteMotor(0, MotorSpeed[0]);
   WriteMotor(1, MotorSpeed[1]);
