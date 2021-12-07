@@ -44,9 +44,9 @@ void QuadX(int16_t Throttle, int16_t Roll, int16_t Pitch, int16_t Yaw)
 { 
   uint8_t j;
   MotorSpeed[0] = 900  + Throttle + Roll - Pitch - Yaw;
-  MotorSpeed[1] = 1150 + Throttle + Roll + Pitch + Yaw; // pitch issues
-  MotorSpeed[2] = 880 + Throttle - Roll + Pitch - Yaw;
-  MotorSpeed[3] = 1000 + Throttle - Roll - Pitch + Yaw;
+  MotorSpeed[1] = 1250 + Throttle + Roll + Pitch + Yaw; // pitch issues
+  MotorSpeed[2] = 900 + Throttle - Roll + Pitch - Yaw;
+  MotorSpeed[3] = 1050 + Throttle - Roll - Pitch + Yaw;
 
   WriteMotor(0, MotorSpeed[0]);
   WriteMotor(1, MotorSpeed[1]);
