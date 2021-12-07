@@ -2,13 +2,15 @@
 
 double Angle[3] = {0}, Rate[3] = {0}, DT = 0;
 int Offset[7] = {
-  9170, // Acc X
-  7285,  // Acc Y
-  15150, // Acc Z
-  -2895,     // Temp
-  841,   // Gyro X
-  -835,  // Gyro Y
-  1330};  // Gyro Z
+  8770, // Acc X
+  8180,  // Acc Y
+  7370, // Acc Z  - 134**
+  
+  -2500,     // Temp
+  
+  2466,   // Gyro X
+  -846,  // Gyro Y
+  1081};  // Gyro Z;  // Gyro Z
 uint32_t imuTime = 0;
 
 void InitIMU()
